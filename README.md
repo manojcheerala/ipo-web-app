@@ -89,18 +89,50 @@ ipo_project/
 
 ## 🖼️ Screenshots
 
-| #  | Description           | Filename                     |
-|----|-----------------------|------------------------------|
-| 1  | Homepage (IPO List)   | `public_home_ipo_list.png`   |
-| 2  | IPO Detail Page       | `public_ipo_detail.png`      |
-| 3  | Admin Dashboard       | `admin_dashboard_overview.png` |
-| 4  | Add IPO Form          | `admin_add_ipo_form.png`     |
-| 5  | Edit IPO Form         | `admin_edit_ipo.png`         |
-| 6  | Login Page            | `admin_login_page.png`       |
-| 7  | Register Page         | `admin_register_page.png`    |
-| 8  | Password Reset        | `admin_password_reset.png`   |
-| 9  | JWT Token - Postman   | `postman_jwt_token.png`      |
-| 10 | API JSON Preview      | `postman_api_preview.png`    |
+---
+
+## 🖼️ Screenshots
+
+### 1. Homepage - IPO Listings
+![Homepage](screenshots/public_home_ipo_list.png)
+
+### 2. IPO Detail Page
+![IPO Detail](screenshots/public_ipo_detail.png)
+
+### 3. Admin Dashboard Overview
+![Admin Dashboard](screenshots/admin_dashboard_overview.png)
+
+### 4. Add IPO Form
+![Add IPO](screenshots/admin_add_ipo_form.png)
+
+### 5. Edit IPO Form
+![Edit IPO](screenshots/admin_edit_ipo.png)
+
+### 6. Login Page
+![Login Page](screenshots/admin_login_page.png)
+
+### 7. Register Page
+![Register Page](screenshots/admin_register_page.png)
+
+### 8. Password Reset Page
+![Password Reset](screenshots/admin_password_reset.png)
+
+### 9. Reset Email Sent Confirmation
+![Reset Email Sent](screenshots/admin_reset_email_sent.png)
+
+### 10. Password Change Page
+![Password Change](screenshots/admin_password_change.png)
+
+### 11. Postman - JWT Token Response
+![Postman JWT](screenshots/postman_jwt_token.png)
+
+### 12. Postman - API JSON Preview
+![Postman API Preview](screenshots/postman_api_preview.png)
+
+### 13. GitHub Repository Overview
+![GitHub Repo](screenshots/github_repo_overview.png)
+
+---
 
 ---
 
