@@ -115,7 +115,7 @@ ipo_project/
 
 ## ✅ Final Status
 
-- ✅ Matches all **Figma Component 2** UI requirements  
+- ✅ Matches all UI requirements  
 - ✅ Fully mobile responsive (tested on Chrome & mobile view)  
 - ✅ Screenshots and media tested  
 - ✅ Working password flows & JWT API  
