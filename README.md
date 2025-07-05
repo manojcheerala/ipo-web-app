@@ -67,20 +67,22 @@ To build a secure, responsive, and API-driven IPO information system with:
 
 ipo_project/
 ├── ipo_app/
-│ ├── models.py
-│ ├── views.py
-│ ├── serializers.py
-│ └── urls.py
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   └── urls.py
 ├── templates/
-│ ├── home.html
-│ └── detail.html
+│   ├── home.html
+│   └── detail.html
 ├── media/
-│ ├── logos/
-│ └── docs/
+│   ├── logos/
+│   └── docs/
 ├── static/
 ├── requirements.txt
 ├── README.md
 └── manage.py
+
+
 
 
 ---
