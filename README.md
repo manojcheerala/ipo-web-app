@@ -65,6 +65,8 @@ To build a secure, responsive, and API-driven IPO information system with:
 
 ## 🗂️ Project Structure (Simplified)
 
+
+
 ipo_project/
 ├── ipo_app/
 │   ├── models.py
@@ -85,6 +87,11 @@ ipo_project/
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 392a89f5850fe68941902b3dd48a4636b61c3a57
 ---
 
 ## 🖼️ Screenshots
