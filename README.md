@@ -84,33 +84,56 @@ ipo_project/
 
 ---
 
-## 🖼️ Screenshots
+##  Screenshots
 
-### 🖥️ Desktop View
+###  Desktop View
 
-| #  | Page                        | File                                  |
-|----|-----------------------------|----------------------------------------|
-| 1  | IPO Homepage (Desktop)      | `screenshots/public_home_ipo_list.png`|
-| 2  | IPO Detail (Desktop)        | `screenshots/public_ipo_detail.png`   |
-| 3  | Admin Dashboard             | `screenshots/admin_dashboard_overview.png`|
-| 4  | Add IPO Form                | `screenshots/admin_add_ipo_form.png`  |
-| 5  | Edit IPO Form               | `screenshots/admin_edit_ipo.png`      |
-| 6  | Login Page                  | `screenshots/admin_login_page.png`    |
-| 7  | Register Page               | `screenshots/admin_register_page.png` |
-| 8  | Password Reset Page         | `screenshots/admin_password_reset.png`|
-| 9  | Password Reset Sent         | `screenshots/admin_reset_email_sent.png`|
-|10  | Password Change             | `screenshots/admin_password_change.png`|
-|11  | Postman - JWT Token         | `screenshots/postman_jwt_token.png`   |
-|12  | Postman - API Preview       | `screenshots/postman_api_preview.png` |
-|13  | GitHub Repo Overview        | `screenshots/github_repo_overview.png`|
+###  IPO Homepage (Desktop)
+![IPO Homepage](screenshots/public_home_ipo_list.png)
 
-### 📱 Mobile View
+###  IPO Detail Page (Desktop)
+![IPO Detail](screenshots/public_ipo_detail.png)
 
-| #  | Page                            | File                                |
-|----|----------------------------------|-------------------------------------|
-| 1  | IPO Homepage (Mobile)           | `screenshots/mobile_homepage.png`   |
-| 2  | IPO Detail Page (Mobile)        | `screenshots/mobile_ipo_detail.png` |
+###  Admin Dashboard Overview
+![Admin Dashboard](screenshots/admin_dashboard_overview.png)
 
+###  Add IPO Form
+![Add IPO](screenshots/admin_add_ipo_form.png)
+
+###  Edit IPO Form
+![Edit IPO](screenshots/admin_edit_ipo.png)
+
+###  Login Page
+![Login Page](screenshots/admin_login_page.png)
+
+###  Register Page
+![Register Page](screenshots/admin_register_page.png)
+
+###  Password Reset Page
+![Password Reset](screenshots/admin_password_reset.png)
+
+###  Password Reset Email Sent
+![Reset Email Sent](screenshots/admin_reset_email_sent.png)
+
+###  Password Change Page
+![Password Change](screenshots/admin_password_change.png)
+
+###  Postman – JWT Token Response
+![Postman JWT](screenshots/postman_jwt_token.png)
+
+###  Postman – API JSON Preview
+![Postman API Preview](screenshots/postman_api_preview.png)
+
+###  GitHub Repository File View
+![GitHub Repo](screenshots/github_repo_overview.png)
+
+###  Mobile View
+
+###  IPO Homepage (Mobile)
+![Mobile Homepage](screenshots/mobile_homepage.png)
+
+####  IPO Detail Page (Mobile)
+![Mobile IPO Detail](screenshots/mobile_ipo_detail.png)
 ---
 
 ## ✅ Final Status
