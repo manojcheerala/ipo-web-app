@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IPO Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    h2 {
+      font-weight: 600;
+    }
+    .table td, .table th {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="mb-0"> IPO Table</h2>
+      <a href="{% url 'admin-dashboard' %}" class="btn btn-sm btn-outline-secondary">← Back to Dashboard</a>
+    </div>
+
+    {% if ipos %}
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover bg-white shadow-sm">
+          <thead class="table-dark">
+            <tr>
+              <th>Company</th>
+              <th>Status</th>
+              <th>Open</th>
+              <th>Close</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for ipo in ipos %}
+              <tr>
+                <td>{{ ipo.company_name }}</td>
+                <td><span class="badge bg-info text-dark">{{ ipo.status|capfirst }}</span></td>
+                <td>{{ ipo.open_date }}</td>
+                <td>{{ ipo.close_date }}</td>
+                <td class="text-center">
+                  <a href="{% url 'edit-ipo' ipo.pk %}" class="btn btn-sm btn-warning me-1">Edit</a>
+                  <a href="{% url 'delete-ipo' ipo.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <div class="alert alert-info mt-4" role="alert">
+        No IPOs found in the system.
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

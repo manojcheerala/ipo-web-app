@@ -2,56 +2,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>{{ ipo.company_name }} - IPO Details</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     .logo-img {
-      height: 80px;
+      max-height: 80px;
       object-fit: contain;
+    }
+    .info-label {
+      font-weight: 600;
+      background-color: #f8f9fa;
+      width: 40%;
+    }
+    .back-btn {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 576px) {
+      .info-label {
+        width: 50%;
+      }
     }
   </style>
 </head>
 <body class="bg-light">
 
-<div class="container py-4">
-  <a href="/" class="btn btn-outline-secondary mb-3">← Back to IPOs</a>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12">
 
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <div class="d-flex align-items-center mb-3">
-        {% if ipo.logo %}
-          <img src="{{ ipo.logo.url }}" class="me-3 logo-img" alt="{{ ipo.company_name }}">
-        {% endif %}
-        <h3 class="mb-0">{{ ipo.company_name }}</h3>
-      </div>
+        <!-- Back Button -->
+        <a href="{% url 'home' %}" class="btn btn-outline-secondary back-btn">← Back to IPOs</a>
 
-      <table class="table table-striped">
-        <tr><th>Status</th><td>{{ ipo.status|title }}</td></tr>
-        <tr><th>Price Band</th><td>{{ ipo.price_band }}</td></tr>
-        <tr><th>Issue Type</th><td>{{ ipo.issue_type }}</td></tr>
-        <tr><th>Issue Size</th><td>{{ ipo.issue_size }}</td></tr>
-        <tr><th>Open Date</th><td>{{ ipo.open_date }}</td></tr>
-        <tr><th>Close Date</th><td>{{ ipo.close_date }}</td></tr>
-        <tr><th>Listing Date</th><td>{{ ipo.listing_date }}</td></tr>
-        <tr><th>IPO Price</th><td>{{ ipo.ipo_price }}</td></tr>
-        <tr><th>Listing Price</th><td>{{ ipo.listing_price }}</td></tr>
-        <tr><th>Current Market Price</th><td>{{ ipo.current_market_price }}</td></tr>
-        <tr><th>Listing Gain</th><td>{{ ipo.listing_gain }}%</td></tr>
-        <tr><th>Current Return</th><td>{{ ipo.current_return }}%</td></tr>
-      </table>
+        <!-- IPO Detail Card -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            
+            <!-- Logo + Name -->
+            <div class="d-flex flex-column align-items-center mb-4">
+              {% if ipo.logo %}
+                <img src="{{ ipo.logo.url }}" alt="{{ ipo.company_name }} Logo" class="logo-img mb-2">
+              {% endif %}
+              <h4 class="fw-bold text-center">{{ ipo.company_name }}</h4>
+              {% if ipo.tagline %}
+                <p class="text-muted small text-center">{{ ipo.tagline }}</p>
+              {% endif %}
+            </div>
 
-      <div class="mt-4">
-        {% if ipo.rhp_pdf %}
-          <a href="{{ ipo.rhp_pdf.url }}" class="btn btn-outline-primary" target="_blank">Download RHP</a>
-        {% endif %}
-        {% if ipo.drhp_pdf %}
-          <a href="{{ ipo.drhp_pdf.url }}" class="btn btn-outline-primary" target="_blank">Download DRHP</a>
-        {% endif %}
+            <!-- IPO Information -->
+            <table class="table table-bordered">
+              <tbody>
+                <tr><td class="info-label">Status</td><td>{{ ipo.status|title }}</td></tr>
+                <tr><td class="info-label">Price Band</td><td>{{ ipo.price_band }}</td></tr>
+                <tr><td class="info-label">Issue Type</td><td>{{ ipo.issue_type }}</td></tr>
+                <tr><td class="info-label">Issue Size</td><td>{{ ipo.issue_size }}</td></tr>
+                <tr><td class="info-label">Open Date</td><td>{{ ipo.open_date }}</td></tr>
+                <tr><td class="info-label">Close Date</td><td>{{ ipo.close_date }}</td></tr>
+                <tr><td class="info-label">Listing Date</td><td>{{ ipo.listing_date|default:"TBD" }}</td></tr>
+                <tr><td class="info-label">IPO Price</td><td>₹{{ ipo.ipo_price|floatformat:2 }}</td></tr>
+                <tr><td class="info-label">Listing Price</td><td>₹{{ ipo.listing_price|floatformat:2 }}</td></tr>
+                <tr><td class="info-label">Current Market Price</td><td>₹{{ ipo.current_market_price|floatformat:2 }}</td></tr>
+                <tr><td class="info-label">Listing Gain</td><td>
+                  {% if ipo.listing_gain != None %}
+                    {{ ipo.listing_gain }}%
+                  {% else %}
+                    N/A
+                  {% endif %}
+                </td></tr>
+                <tr><td class="info-label">Current Return</td><td>
+                  {% if ipo.current_return != None %}
+                    {{ ipo.current_return }}%
+                  {% else %}
+                    N/A
+                  {% endif %}
+                </td></tr>
+              </tbody>
+            </table>
+
+            <!-- RHP / DRHP Download Buttons -->
+            {% if ipo.rhp_pdf or ipo.drhp_pdf %}
+              <div class="mt-4 text-center">
+                {% if ipo.rhp_pdf %}
+                  <a href="{{ ipo.rhp_pdf.url }}" class="btn btn-outline-primary me-2" download>Download RHP</a>
+                {% endif %}
+                {% if ipo.drhp_pdf %}
+                  <a href="{{ ipo.drhp_pdf.url }}" class="btn btn-outline-primary" download>Download DRHP</a>
+                {% endif %}
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>
